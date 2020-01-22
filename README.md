@@ -1,7 +1,7 @@
 # People API
 
 **Author**: Joseph Hangarter
-**Version**: 1.0.3
+**Version**: 1.0.4
 
 ## Overview
 * Features - Django REST Framework
@@ -23,16 +23,17 @@
 * install django
 * install docker
 * install docker-compose
-* python manage.py runserver
-* open server from terminal
+* docker-compose run web ./manage.py runserver
 
 ## Routes
 * admin page- `http://127.0.0.1:8000/admin`; admin page
-* people page 1 - `http://127.0.0.1:8000/people/1`; people 1
-* people page 2 - `http://127.0.0.1:8000/people/2`; people 2
+* person list - `http://localhost:8000/api/v1/person/`
+* person details `<pk>` - `http://localhost:8000/api/v1/person/1/`
 
 ## Architecture
 * `django`
 * `djangorestframework`
 * `docker`
 * `docker-compose`
+* `psycopg2-binary`
+
