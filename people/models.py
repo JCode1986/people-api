@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # https://docs.djangoproject.com/en/3.0/topics/db/models/
 class People(models.Model):
@@ -7,9 +8,10 @@ class People(models.Model):
     birth_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    def __str__(self):
-        self.first_name
+    # def __str__(self):
+    #     return self.first_name
 
     def baby_boomer_status(self):
         "Returns the person's baby-boomer status."
