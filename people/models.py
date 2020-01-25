@@ -29,6 +29,7 @@ class People(models.Model):
     author = models.ForeignKey('auth.user', on_delete=models.CASCADE)
 
     def __str__(self):
+        "Returns person's nickname, age, and boomer status"
         return f'{self.nickname} -- Age: {self.calculate_age()} -- Boomer Status: {self.baby_boomer_status()}'
 
     def baby_boomer_status(self):
@@ -41,6 +42,7 @@ class People(models.Model):
             return "Post-boomer"
 
     def calculate_age(self):
+        "Returns persons age"
         today = date.today()
         birth_date = self.birth_date
         return today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
