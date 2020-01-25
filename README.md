@@ -26,7 +26,7 @@
 ## Running the App
 * In CLI, type `ssh root@64.227.57.230`
 * Once in ssh, type `docker-compose up --build`
-* When the build is complete, enter or `ctrl+click` one of the `routes` for `Deployed` shown below
+* When the build is complete, enter one of the `routes` for `Deployed` shown below
 
 ## Routes
 * Port - `8000`
