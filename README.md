@@ -51,4 +51,3 @@
     * `whitenoise` 
     * `django-cors-headers` 
     * `django-environ` 
-
